@@ -30,7 +30,7 @@ class Song
     result = {}
     @@genres.each { |genre|
       if result[genre] == nil
-        result = 1
+        result[genre]= 1
       else
         result[genre] += 1
       end
