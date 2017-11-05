@@ -39,7 +39,9 @@ class Song
     result = {}
     @@artists.each { |artist|
       result[artist] ||= [0]
-      result[artist] += 1}
+      result[artist] += 1
+    }
+    result
   end
 
 end
