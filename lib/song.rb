@@ -29,8 +29,11 @@ class Song
   def self.genre_count
     result = {}
     @@genres.each { |genre|
-      result[genre] ||= []
-      result[genre] += 1
+      if result[genre] == nil
+        result = 1
+      else
+        result[genre] += 1
+      end
     }
     result
   end
